@@ -25,5 +25,10 @@ for ( i = 1; i < argc; ++i ) {
  printf("\nThe postnOrder traversal is:\n" );   
   postOrder( b.root );
     printf("\n");
+
+  printf("\nMy tree:\n");
+  printTree(b.root,0);
+
+  
 } // end main
 

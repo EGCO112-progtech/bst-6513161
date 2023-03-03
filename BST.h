@@ -100,5 +100,16 @@ void postOrder(TreeNodePtr treePtr)
     postOrder(treePtr->rightPtr);
     printf("%3d",treePtr->data);
   }
-    
+}
+
+void printTree(TreeNodePtr treePtr,int count)
+{
+  if(treePtr!=NULL){
+    printTree(treePtr->rightPtr, count+1);
+    for(int i=0; i<count; i++){
+      printf("      ");
+    }
+    printf("%3d\n",treePtr->data);
+    printTree(treePtr->leftPtr,count+1);
+  }
 }
